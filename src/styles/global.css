@@ -1,0 +1,81 @@
+:root {
+  --primary-color: #0cdade;
+  --secondary-color: #1c1c1c;
+  --background-color: #17191c;
+  --text-color: #ffffff;
+  --accent-color: #ff5722; /* Example of an accent color */
+  --button-bg: #0cbfc2; /* Example for button background color */
+  --button-hover-bg: #14ebf7; /* Example for button hover background color */
+  --text-black : rgb(57, 57, 57);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+  }
+
+  @keyframes floating-anim{
+    0%{
+      transform: translateY(0px);
+    }
+    50%{
+      transform: translateY(-10px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+  }
+
+  .heading-gradient {
+    font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
+    margin-bottom: 20px;
+    background: -webkit-linear-gradient(45deg, #ff007f, #00d2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .clickable-text-primary:hover {
+    transform: translateY(-1px);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .button-primary{
+    background-color: none;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid white;
+  }
+  
+  .button-primary:hover{
+    background: -webkit-linear-gradient(45deg, #ff007f, #00d2ff);
+    color: white;
+    border: none;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-secondary{
+    background-color: none;
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+
+  .btn-secondary:hover{
+    background: -webkit-linear-gradient(45deg, #ff007f, #00d2ff);
+    color: white;
+    border: none;
+  }
+
+  .para-primary{
+    font-size: clamp(1rem, 1vw, 1.2rem);
+    line-height: 1.8rem;
+    text-align: left;
+  }

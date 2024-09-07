@@ -1,0 +1,172 @@
+/* Keyframes for subtle animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollArrow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.header-banner {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.header-banner .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 50%;
+  animation: fadeInUp 1s ease-out;
+}
+
+.header-banner .company-name {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.company-name h1 {
+  font-size: clamp(3rem,4vw + 2rem,6rem);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.company-name span {
+  color: var(--primary-color);
+}
+
+.header-banner .tagline {
+  margin-top: 20px;
+  font-size: clamp(1.2rem,3vw,2rem);
+  line-height: 1.4;
+  text-align: left;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.header-banner .description {
+  margin-top: 10px;
+  font-size: clamp(1rem,1.25rem,1rem);
+  line-height: 1.6;
+  text-align: left;
+  max-width: 90%;
+  animation: fadeInUp 2s ease-out;
+}
+
+.cta-container {
+  margin-top: 30px;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.header-banner .right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-banner .right .header-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  object-fit: contain;
+  animation: fadeInUp 2s ease-out;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.scroll-indicator {
+  font-size: 3rem;
+  margin: 0;
+  opacity: 0.8;
+  transition: all 0.2 ease-in-out;
+}
+
+.arrow {
+  animation: scrollArrow 1s ease-in-out infinite;
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+  .header-banner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+  }
+
+  .header-banner .left .description{
+    text-align: center;
+  }
+
+  .header-banner .left {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .header-banner .company-name {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .header-banner .right .header-image {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+
+
+  .header-banner .tagline {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .header-banner .tagline {
+    font-size: 1rem;
+  }
+
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
